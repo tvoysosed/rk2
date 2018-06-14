@@ -98,16 +98,16 @@ template <class T>
 Complex<T> Complex<T>::from_string(const string& str) { 
   Complex<T> c; 
   stringstream ss{str}; 
-  ss»c; 
+  ss>>c; 
   return c; 
 } 
 template <class T1> 
-auto operator«(ostream& os, const Complex<T1>& c) -> ostream&{ 
-  os«c.Pair->first«","«c.Pair->second; 
+auto operato<<(ostream& os, const Complex<T1>& c) -> ostream&{ 
+  os<<c.Pair->first«","«c.Pair->second; 
   return os; 
 } 
 template <class T2,class T3> 
-auto operator»(T2& in, Complex<T3>& c) -> istream&{ 
+auto operator>>(T2& in, Complex<T3>& c) -> istream&{ 
   in»c.Pair->first»c.Pair->second; 
   return in; 
 } 
